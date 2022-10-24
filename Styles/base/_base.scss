@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+    /*This defines what 1rem is. 62.5% of 16px (browser default) is 10px. */
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #c0b0a4;
+    color: #fff;
+}
+
+.main-container {
+    background-color: #c0b0a4;
+    padding: 5rem 10rem;
+    margin-top: 17vh;
+    min-height: 80vh;
+
+    @include respond(tab-land) {
+        padding: 5rem 10rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 5rem 7.5rem;
+    }
+
+    @include respond(phone) {
+        padding: 10rem 4rem;
+    }
+}

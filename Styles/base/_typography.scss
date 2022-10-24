@@ -1,0 +1,25 @@
+.secondary-heading {
+    align-self: flex-start;
+    font-family: 'Dancing Script', cursive;
+    font-size: 7rem;
+    margin: 1rem 0 4rem 10rem;
+    color: #5e5146;
+
+    @include respond(big-desktop) {
+        margin-left: 20rem;
+    }
+
+    @include respond(tab-land) {
+        margin-left: 5rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 5.5rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
+}

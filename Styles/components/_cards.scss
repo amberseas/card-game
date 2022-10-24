@@ -1,0 +1,425 @@
+.main-section {
+    margin: 0 auto;
+
+    .card-main {
+        position: relative;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 1px 3px 2rem rgba(0, 0, 0, 0.315);
+        border-radius: 3rem;
+        width: 25rem;
+        height: 25rem;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 1rem rgba(255, 255, 255, 0.432);
+        }
+
+        &__title {
+            margin: 1rem 0;
+            font-size: 3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #555b6e;
+        }
+
+        &__picture {
+            position: relative;
+            height: 80%;
+            border-top-left-radius: 3rem;
+            border-top-right-radius: 3rem;
+
+            img {
+                position: absolute;
+                width: 120%;
+                left: 50%;
+                bottom: -0.5rem;
+                transform: translateX(-50%);
+            }
+
+            &--fairytales {
+                background-color: #ffcfd2;
+            }
+
+            &--animals {
+                background-color: #90a955;
+            }
+
+            &--food {
+                background-color: #f9c784;
+            }
+
+            &--colors {
+                background-color: #e86252;
+            }
+
+            &--emotions {
+                background-color: #cdb4db;
+            }
+
+            &--activities {
+                background-color: #fc7a1e;
+            }
+
+            &--clothes {
+                background-color: #ffb5a7;
+            }
+
+            &--space {
+                background-color: #A9DFF7;
+            }
+
+            &--cars {
+                background-color: #d62828;
+            }
+
+        }
+    }
+}
+
+
+.game-card {
+    position: relative;
+    text-align: center;
+    width: 25rem;
+    height: 25rem;
+    cursor: pointer;
+
+    &__side {
+        backface-visibility: hidden;
+        overflow: hidden;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 1px 3px 2rem rgba(255, 255, 255, 0.555);
+        border-radius: 3rem;
+
+        &--back {
+            transform: rotateY(180deg);
+        }
+    }
+
+
+
+    &__picture {
+        background-size: cover;
+        background-position: center;
+        height: 80%;
+
+        // fairytales
+        &--dragon {
+            background-image: url('/English_for_Kids/data/img/dragon.svg');
+        }
+
+        &--prince {
+            background-image: url('/English_for_Kids/data/img/prince.svg');
+        }
+
+        &--princess {
+            background-image: url('/English_for_Kids/data/img/princess.svg');
+        }
+
+        &--fairy {
+            background-image: url('/English_for_Kids/data/img/fairy.svg');
+        }
+
+        &--mermaid {
+            background-image: url('/English_for_Kids/data/img/mermaid.svg');
+        }
+
+        &--knight {
+            background-image: url('/English_for_Kids/data/img/knight.svg');
+        }
+
+        &--witch {
+            background-image: url('/English_for_Kids/data/img/witch.svg');
+        }
+
+        &--wizard {
+            background-image: url('/English_for_Kids/data/img/wizard.svg');
+        }
+
+        // animals
+        &--lion {
+            background-image: url('/English_for_Kids/data/img/lion.svg');
+        }
+
+        &--camel {
+            background-image: url('/English_for_Kids/data/img/camel.svg');
+        }
+
+        &--elephant {
+            background-image: url('/English_for_Kids/data/img/elephant.svg');
+        }
+
+        &--cow {
+            background-image: url('/English_for_Kids/data/img/cow.svg');
+        }
+
+        &--koala {
+            background-image: url('/English_for_Kids/data/img/koala.svg');
+        }
+
+        &--giraffe {
+            background-image: url('/English_for_Kids/data/img/giraffe.svg');
+        }
+
+        &--whale {
+            background-image: url('/English_for_Kids/data/img/whale.svg');
+        }
+
+        &--tiger {
+            background-image: url('/English_for_Kids/data/img/tiger.svg');
+        }
+
+        // food
+        &--salad {
+            background-image: url('/English_for_Kids/data/img/salad.svg');
+        }
+
+        &--pizza {
+            background-image: url('/English_for_Kids/data/img/pizza.svg');
+        }
+
+        &--icecream {
+            background-image: url('/English_for_Kids/data/img/icecream.svg');
+        }
+
+        &--sandwich {
+            background-image: url('/English_for_Kids/data/img/sandwich.svg');
+        }
+
+        &--pancakes {
+            background-image: url('/English_for_Kids/data/img/pancakes.svg');
+        }
+
+        &--steak {
+            background-image: url('/English_for_Kids/data/img/steak.svg');
+        }
+
+        &--muffin {
+            background-image: url('/English_for_Kids/data/img/muffin.svg');
+        }
+
+        &--salmon {
+            background-image: url('/English_for_Kids/data/img/salmon.svg');
+        }
+
+        // activities
+        &--dance {
+            background-image: url('/English_for_Kids/data/img/dance.svg');
+        }
+
+        &--draw {
+            background-image: url('/English_for_Kids/data/img/draw.svg');
+        }
+
+        &--read {
+            background-image: url('/English_for_Kids/data/img/read.svg');
+        }
+
+        &--sing {
+            background-image: url('/English_for_Kids/data/img/sing.svg');
+        }
+
+        &--swim {
+            background-image: url('/English_for_Kids/data/img/swim.svg');
+        }
+
+        &--play {
+            background-image: url('/English_for_Kids/data/img/play(activity).svg');
+        }
+
+        &--run {
+            background-image: url('/English_for_Kids/data/img/run.svg');
+        }
+
+        &--cook {
+            background-image: url('/English_for_Kids/data/img/cook.svg');
+        }
+
+        // emotions
+        &--sad {
+            background-image: url('/English_for_Kids/data/img/sad.svg');
+        }
+
+        &--angry {
+            background-image: url('/English_for_Kids/data/img/angry.svg');
+        }
+
+        &--surprised {
+            background-image: url('/English_for_Kids/data/img/surprised.svg');
+        }
+
+        &--scared {
+            background-image: url('/English_for_Kids/data/img/scared.svg');
+        }
+
+        &--tired {
+            background-image: url('/English_for_Kids/data/img/tired.svg');
+        }
+
+        &--happy {
+            background-image: url('/English_for_Kids/data/img/happy.svg');
+        }
+
+        &--sleepy {
+            background-image: url('/English_for_Kids/data/img/sleepy.svg');
+        }
+
+        &--shy {
+            background-image: url('/English_for_Kids/data/img/shy.svg');
+        }
+
+        // clothes
+        &--pants {
+            background-image: url('/English_for_Kids/data/img/pants.svg');
+        }
+
+        &--shoes {
+            background-image: url('/English_for_Kids/data/img/shoes.svg');
+        }
+
+        &--dress {
+            background-image: url('/English_for_Kids/data/img/dress.svg');
+        }
+
+        &--shirt {
+            background-image: url('/English_for_Kids/data/img/shirt.svg');
+        }
+
+        &--socks {
+            background-image: url('/English_for_Kids/data/img/socks.svg');
+        }
+
+        &--hat {
+            background-image: url('/English_for_Kids/data/img/hat.svg');
+        }
+
+        &--jacket {
+            background-image: url('/English_for_Kids/data/img/jacket.svg');
+        }
+
+        &--skirt {
+            background-image: url('/English_for_Kids/data/img/skirt.svg');
+        }
+
+        // cars
+        &--fire-engine {
+            background-image: url('/English_for_Kids/data/img/fire-engine.svg');
+        }
+
+        &--ambulance {
+            background-image: url('/English_for_Kids/data/img/ambulance.svg');
+        }
+
+        &--police {
+            background-image: url('/English_for_Kids/data/img/police.svg');
+        }
+
+        &--bus {
+            background-image: url('/English_for_Kids/data/img/bus.svg');
+        }
+
+        &--taxi {
+            background-image: url('/English_for_Kids/data/img/taxi.svg');
+        }
+
+        &--truck {
+            background-image: url('/English_for_Kids/data/img/truck.svg');
+        }
+
+        &--motorcycle {
+            background-image: url('/English_for_Kids/data/img/motorcycle.svg');
+        }
+
+        &--train {
+            background-image: url('/English_for_Kids/data/img/train.svg');
+        }
+
+        // space
+        &--rocket {
+            background-image: url('/English_for_Kids/data/img/rocket.svg');
+        }
+
+        &--planet {
+            background-image: url('/English_for_Kids/data/img/planet.svg');
+        }
+
+        &--earth {
+            background-image: url('/English_for_Kids/data/img/earth.svg');
+        }
+
+        &--satellite {
+            background-image: url('/English_for_Kids/data/img/satellite.svg');
+        }
+
+        &--sun {
+            background-image: url('/English_for_Kids/data/img/sun.svg');
+        }
+
+        &--meteorite {
+            background-image: url('/English_for_Kids/data/img/meteorite.svg');
+        }
+
+        &--moon {
+            background-image: url('/English_for_Kids/data/img/moon.svg');
+        }
+
+        &--astronaut {
+            background-image: url('/English_for_Kids/data/img/astronaut.svg');
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #555b6e;
+    }
+
+    &__button {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        z-index: 100;
+
+        img {
+            @include absCenter;
+            width: 100%;
+        }
+    }
+}
+
+.play-mode {
+    .game-card {
+
+        &__title,
+        &__button {
+            display: none;
+        }
+
+        &__picture {
+            height: 100%;
+            padding: 1rem;
+        }
+    }
+
+}
+
+.inactive {
+    opacity: 50%;
+    cursor: default;
+    pointer-events: none;
+}

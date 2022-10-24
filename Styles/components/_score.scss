@@ -1,0 +1,16 @@
+.score__container {
+    height: 4rem;
+    width: 90vw;
+    position: absolute;
+    right: 5rem;
+    margin-top: -3.5rem;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    @include respond(phone) {
+        height: 2rem;
+        top: 5rem;
+        right: 1rem;
+    }
+}

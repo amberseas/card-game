@@ -1,0 +1,133 @@
+.statistics {
+    z-index: 100000;
+    max-width: 150rem;
+    margin: 0 auto;
+    margin-top: 18vh;
+    text-align: center;
+
+
+    &__buttons {
+        display: flex;
+        justify-content: end;
+
+        @include respond(phone) {
+            justify-content: center;
+        }
+
+        .btn {
+            margin: 1rem;
+            font-size: 2rem;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+;
+
+.stats {
+    &__container {
+        height: 65vh;
+        margin: 0 5rem;
+
+        @include respond(tab-port) {
+            height: 70vh;
+        }
+    }
+
+    &-table {
+        width: 100%;
+        margin-top: 3rem;
+        background-color: $color-primary-light;
+
+        &__header-row {
+            text-align: center;
+            padding: 1rem;
+            background-color: $color-primary;
+            position: sticky;
+            top: 0;
+
+            th {
+                min-width: min-content;
+                position: relative;
+                color: #555b6e;
+                font-size: 2rem;
+                font-weight: 500;
+                padding: 0 5rem 0 0 !important;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.219);
+
+                @include respond(tab-land) {
+                    padding: 0 !important;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 1.5rem;
+                    min-width: 15rem;
+                }
+
+
+                .sort-icon-box {
+                    position: absolute;
+                    display: inline-block;
+                    height: 2.5rem;
+                    top: 20%;
+                    right: 5%;
+
+                    span {
+                        cursor: pointer;
+                        transform: scale(1.2);
+                    }
+
+                    @include respond(tab-land) {
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                    }
+                }
+            }
+
+
+        }
+
+        &__body-row {
+            text-align: center;
+
+            &:hover {
+                background-color: darken($color-primary-light, 10%);
+            }
+
+            td {
+                padding: 1rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: darken($color-primary-light, 20%);
+                }
+
+                @include respond(phone) {
+                    font-size: 1.2rem;
+                    padding: 0.7rem;
+                }
+
+            }
+        }
+
+    }
+}
+
+.RDW-background-image {
+    text-align: center;
+    margin-top: 15rem;
+
+    img {
+        width: 20rem;
+
+        @include respond(phone) {
+            width: 10rem;
+        }
+    }
+}

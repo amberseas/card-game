@@ -1,0 +1,49 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/helper-classes';
+@import 'base/base';
+@import 'base/typography';
+@import 'components/switch';
+@import 'components/cards';
+@import 'components/game-mode-buttons';
+@import 'components/score';
+@import 'components/result';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/statistics';
+
+//base
+// @mixin respond($breakpoint) {
+//     @if $breakpoint ==phone {
+//         @media only screen and (max-width: 37.5em) {
+//             @content
+//         }
+
+//         ; //width <=600px, i applied only on screens and if someone tries to print it, media query will not apply
+//     }
+
+//     @if $breakpoint ==tab-port {
+//         @media only screen and (max-width: 56.25em) {
+//             @content
+//         }
+
+//         ; //width <=900px
+//     }
+
+//     @if $breakpoint ==tab-land {
+//         @media only screen and (max-width: 75em) {
+//             @content
+//         }
+
+//         ; //width <=1200px
+//     }
+
+//     @if $breakpoint ==big-desktop {
+//         @media only screen and (min-width: 112.5em) {
+//             @content
+//         }
+
+//         ; //width >=1800px
+//     }
+// }

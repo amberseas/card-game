@@ -1,0 +1,38 @@
+.score-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+
+    img {
+        cursor: pointer;
+        height: 50rem;
+    }
+
+    &--disabled {
+        transform: scale(0);
+        border-radius: 50%;
+    }
+
+    &--active {
+        transform: scale(1);
+        border-radius: 0;
+    }
+
+    .tertiary-heading {
+        font-size: 4rem;
+        position: absolute;
+        margin: 0;
+        margin-bottom: 8rem;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

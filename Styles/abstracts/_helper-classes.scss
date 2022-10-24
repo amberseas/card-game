@@ -1,0 +1,32 @@
+.rotate {
+    .game-card__side {
+        &--front {
+            transform: rotateY(-180deg);
+        }
+
+        &--back {
+            transform: rotateY(0);
+        }
+    }
+}
+
+.none {
+    display: none;
+}
+
+.opacity-none {
+    opacity: 0;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroller {
+    overflow-y: scroll;
+
+    @include respond(tab-land) {
+        overflow-x: scroll;
+    }
+}

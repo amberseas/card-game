@@ -1,0 +1,90 @@
+//Game buttons
+.game-mode-button {
+    &__container {
+        z-index: 300;
+        width: 10rem;
+        height: 20rem;
+        position: fixed;
+        top: 35%;
+        right: 0;
+        background-color: #ff99c9a2;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        box-shadow: 1px 3px 2rem rgba(255, 255, 255, 0.555);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(12rem);
+        transition: all 1s;
+
+        @include respond(tab-land) {
+            width: 7.5rem;
+            height: 15rem;
+        }
+
+        @include respond(tab-port) {
+            top: 16%
+        }
+
+
+        @include respond(phone) {
+            position: relative;
+            top: 10rem;
+            width: 15rem;
+            height: 7.5rem;
+            flex-direction: row;
+            transform: translateX(30rem);
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked~&--play {
+        background-color: #b0a4b9;
+        pointer-events: none;
+    }
+
+    &--play,
+    &--repeat {
+        cursor: pointer;
+        position: relative;
+        width: 7rem;
+        height: 7rem;
+        background-color: #706677;
+        border-radius: 1rem;
+        margin: 0.75rem;
+        transition: all .2s;
+
+        @include respond(tab-land) {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+
+        &:hover {
+            box-shadow: 1px 3px 2rem rgba(255, 255, 255, 0.7);
+            transform: scale(1.05)
+        }
+
+        &:active {
+            box-shadow: 1px 3px 1rem rgba(0, 0, 0, 0.4);
+            transform: scale(1)
+        }
+
+        .play,
+        .repeat {
+            @include absCenter;
+            width: 100%;
+        }
+    }
+}
+
+.switch__checkbox:checked~.game-mode-button__container {
+    transform: translateX(0);
+
+    @include respond(tab-port) {}
+
+    @include respond(phone) {}
+}

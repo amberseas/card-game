@@ -1,0 +1,201 @@
+.navigation {
+
+    &__cover {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
+    &__button {
+        position: absolute;
+        top: 7rem;
+        left: 14rem;
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        transition: all .5s ease-out;
+        z-index: 300;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            left: 7rem;
+        }
+
+        @include respond(phone) {
+            top: 4rem;
+            left: 4rem;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__icon {
+        position: absolute;
+        @include absCenter;
+
+
+        &,
+        &::before,
+        &::after {
+            width: 5rem;
+            height: 4px;
+            background-color: $color-primary-dark;
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -1.5rem;
+        }
+
+        &::after {
+            top: 1.5rem;
+        }
+    }
+
+    &__nav {
+        z-index: 200;
+        background-color: darken($color-primary, 10%);
+        height: 100%;
+        position: fixed;
+        top: 0;
+        transform: translate(-40rem);
+        transition: all .5s;
+        text-align: center;
+
+        @include respond(tab-port) {
+            transform: translate(-100rem);
+            width: 100vw;
+            height: 100%;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+            border-radius: 1rem;
+        }
+    }
+
+    // FUNCTIONALITY
+    &__checkbox:checked~&__nav {
+        transform: translate(0);
+    }
+
+    &__checkbox:checked~&__button {
+        transform: translateX(20rem);
+
+        @include respond(tab-land) {
+            left: 13rem;
+            transform: translatex(0);
+        }
+
+        @include respond(tab-port) {
+            left: 50%;
+            transform: translatex(-50%);
+        }
+    }
+
+    &__checkbox:checked~&__cover {
+        z-index: 100;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0 5rem 0 2rem;
+        position: relative;
+        top: 15rem;
+        width: 100%;
+
+
+        @include respond(tab-port) {
+            margin: 0 auto;
+            width: 70vw;
+        }
+
+        @include respond(phone) {
+            margin: 0 auto;
+            padding: 0;
+            width: 70vw;
+        }
+    }
+
+    &__item {
+        margin: 1rem;
+
+    }
+
+    &__link:hover,
+    &__link:active,
+    .active {
+        border-radius: 8rem;
+        box-shadow: 0 5px 1px darken($color-primary-dark, 10%);
+        background-color: $color-primary-dark;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 500;
+            padding: 0 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-white;
+            transition: all .2s;
+
+            @include respond(tab-port) {
+                font-weight: 400;
+                justify-content: center;
+                padding-right: 4rem;
+            }
+        }
+
+        img {
+            width: 7rem;
+        }
+    }
+
+    //ICON ANIMATION
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked+&__button &__icon {
+        //'buttob' is adjacent sibling so we select it with '+', 'icon' is direct child to 'button'
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        //'buttob' is adjacent sibling so we select it with '+', 'icon' is direct child to 'button'
+        transform: rotate(135deg); //180deg-45deg = 3/4 of a circle (cooler animation)
+        top: 0;
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        //'buttob' is adjacent sibling so we select it with '+', 'icon' is direct child to 'button'
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
